@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    
+}
+body {
+    background-color: #191A27;
+    min-height: 100vh;
+
+}
+header {
+    background-color: #F6F6F6;
+    padding-bottom: 20px;
+    
+}
+
+.primary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+}
+
+.icon-tabler-search {
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.menu-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    /* border: 3px solid #fff; */
+}
+
+.menu-btn__burger {
+    width: 50px;
+    height: 6px;
+    background: #0F0F0F;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255 101 47/.2);
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #0F0F0F;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255 101 47/.2);
+    transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-16px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(16px);
+}
+
+/*Animation*/
+
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.secundary {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    display: none;
+}
+
+.profile{
+    display: flex;
+    border:1px solid black;
+    padding: 20px;
+    border-radius: 30px;
+}
+.imagen {
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 0px 0px 0px 0px;
+    width: 80px;
+    height: 80px;
+}
+
+
+
+.job {
+    font-weight: bold;
+    font-size: 1em;
+    
+    /* text-align: center; */
+    
+
+}
+
+ .email,.icon-tabler-folder {
+    max-width: 30px;
+    cursor: pointer;
+    
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/* //animation profile*/
+
+.secundary.visible {
+    display: block;
+}
+
